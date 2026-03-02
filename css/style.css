@@ -1,0 +1,273 @@
+/* =========================================
+   ESTILOS BASE (Modo Oscuro)
+   ========================================= */
+html {
+    scroll-behavior: smooth; /* Hace que el salto al hacer clic en el menú sea suave */
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+/* =========================================
+   SECCIONES Y LAYOUT (Nuevo contenido)
+   ========================================= */
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(to bottom, #1a252c, #121212);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #48dbfb; /* Un azul hielo para destacar */
+}
+
+.contenedor-seccion {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contenedor-seccion h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #2d3436;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.info-texto {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.info-texto ul {
+    list-style-type: "⛷️  ";
+    padding-left: 20px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.boton-contacto {
+    display: inline-block;
+    background-color: #1dd1a1;
+    color: #121212;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton-contacto:hover {
+    transform: scale(1.05);
+    background-color: #10ac84;
+}
+
+/* =========================================
+   CUADRÍCULA DE TARJETAS ANIMADAS
+   ========================================= */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-animada {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Altura ajustada para la cuadrícula */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.tarjeta-animada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-animada .texto-oculto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px); /* Animación más sutil */
+    transition: all 0.5s ease;
+}
+
+.tarjeta-animada .texto-oculto h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #48dbfb;
+}
+
+.tarjeta-animada .texto-oculto p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.precio {
+    display: inline-block;
+    background-color: #ff4757;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    align-self: flex-start;
+}
+
+.tarjeta-animada:hover img {
+    transform: scale(1.15);
+}
+
+.tarjeta-animada:hover .texto-oculto {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   MENÚ RUEDA (Botón inferior y Sprite)
+   ========================================= */
+.menu-rueda {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-boton {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ff4757;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
+}
+
+.menu-checkbox:checked ~ .menu-boton {
+    transform: rotate(135deg);
+    background-color: #2d3436;
+}
+
+.item {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(0) rotate(0);
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
+    background-color: #2d3436;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.menu-checkbox:checked ~ .item {
+    opacity: 1;
+    /* Al tener 4 items, los separamos por 60 grados para repartirlos uniformemente */
+    --angle: calc(180deg + 60deg * (var(--i) - 1));
+    transform: rotate(var(--angle)) translateX(110px) rotate(calc(var(--angle) * -1));
+}
+
+.item:hover {
+    transform: rotate(var(--angle)) translateX(120px) rotate(calc(var(--angle) * -1)) scale(1.1);
+    background-color: #48dbfb; /* Da un toque azul al pasar el ratón */
+}
+
+/* =========================================
+   TOOLTIPS (Textos flotantes)
+   ========================================= */
+.item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #48dbfb;
+    color: #121212;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #48dbfb transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.item:hover::after,
+.item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
