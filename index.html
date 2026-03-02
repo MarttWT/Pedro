@@ -1,87 +1,48 @@
 <!doctype html>
-<html class="no-js" lang="es">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instructor de Esquí Profesional</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Menú Principal | Profesor de Esquí</title>
+  <link rel="stylesheet" href="css/style-landing.css">
   <meta name="theme-color" content="#121212">
 </head>
 
 <body>
 
-<header class="hero" id="arriba">
-  <h1>Domina la Montaña</h1>
-  <p>Clases de esquí personalizadas para todos los niveles con tu instructor profesional.</p>
+<header class="hero-landing">
+  <h1>Tu Aventura en la Nieve Empieza Aquí</h1>
+  <p>Selecciona una opción para descubrir todo sobre mis clases de esquí.</p>
 </header>
 
-<section id="datos" class="contenedor-seccion">
-  <h2>⛷️ Sobre el Profesor</h2>
-  <div class="info-texto">
-    <p>Hola, soy [Tu Nombre]. Llevo más de 10 años deslizando por las mejores pistas y enseñando a esquiadores de todas las edades. Mi objetivo es que aprendas la técnica correcta mientras te diviertes y sientes la máxima seguridad en la nieve.</p>
-    <ul>
-      <li>Técnico Deportivo Nivel 2.</li>
-      <li>Especialista en perfeccionamiento técnico y freeride.</li>
-      <li>Clases en Español, Inglés y Francés.</li>
-    </ul>
-  </div>
-</section>
+<main class="contenedor-tarjetas">
 
-<section id="precios" class="contenedor-seccion">
-  <h2>💰 Tipos de Clases y Precios</h2>
-
-  <div class="grid-tarjetas">
-    <div class="tarjeta-animada">
-      <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=600&auto=format&fit=crop" alt="Clases de iniciación al esquí">
-      <div class="texto-oculto">
-        <h3>Bautismo / Iniciación</h3>
-        <p>Pierde el miedo. Aprende la cuña, a frenar y los primeros giros con total seguridad.</p>
-        <span class="precio">Desde 45€ / hora</span>
-      </div>
+  <a href="Datos.html" class="tarjeta-animada">
+    <img src="./img/Datos.JPG" alt="Datos del Profesor">
+    <div class="texto-oculto">
+      <h3>📊 Datos y Perfil</h3>
+      <p>Conoce mi experiencia, mis titulaciones y mi metodología para que aprendas con la máxima seguridad.</p>
     </div>
+  </a>
 
-    <div class="tarjeta-animada">
-      <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?q=80&w=600&auto=format&fit=crop" alt="Esquiador avanzado">
-      <div class="texto-oculto">
-        <h3>Perfeccionamiento</h3>
-        <p>Mejora tu paralelo, clava el bastón correctamente y domina pistas rojas y negras.</p>
-        <span class="precio">Desde 50€ / hora</span>
-      </div>
+  <a href="Precios.html" class="tarjeta-animada">
+    <img src="img/Precios.JPG">
+    <div class="texto-oculto">
+      <h3>💰 Clases y Tarifas</h3>
+      <p>Descubre los diferentes niveles: iniciación, perfeccionamiento, freeride y sus precios.</p>
     </div>
+  </a>
 
-    <div class="tarjeta-animada">
-      <img src="https://images.unsplash.com/photo-1507534192483-69914c0692d7?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Esquí fuera de pista">
-      <div class="texto-oculto">
-        <h3>Freeride</h3>
-        <p>Sal de la pista. Aprende a flotar en nieve polvo y leer el terreno de la montaña.</p>
-        <span class="precio">Desde 60€ / hora</span>
-      </div>
+  <a href="#contacto" class="tarjeta-animada">
+    <img src="./img/Contacto.JPG" alt="Contacto">
+    <div class="texto-oculto">
+      <h3>📞 Contacto Directo</h3>
+      <p>¿Tienes dudas o quieres reservar? Escríbeme y organizamos tu clase a medida.</p>
     </div>
-  </div>
-</section>
+  </a>
 
-<section id="contacto" class="contenedor-seccion">
-  <h2>📞 Reserva tu clase</h2>
-  <div class="info-texto centrado">
-    <p>¿Listo para deslizarte? Escríbeme un WhatsApp o envíame un correo para comprobar disponibilidad.</p>
-
-    <a href="https://wa.me/34661054733?text=Hola,%20me%20gustaría%20información%20sobre%20las%20clases%20de%20esquí" target="_blank" class="boton-contacto">Contactar por WhatsApp</a>
-
-  </div>
-</section>
-
-<div class="menu-rueda">
-  <input type="checkbox" id="toggle-rueda" class="menu-checkbox">
-  <label for="toggle-rueda" class="menu-boton"><span>+</span></label>
-
-  <a href="#datos" class="item" style="--i:1;" data-tooltip="Datos">📊</a>
-  <a href="#contacto" class="item" style="--i:2;" data-tooltip="Contacto">📞</a>
-  <a href="#precios" class="item" style="--i:3;" data-tooltip="Precios">💰</a>
-  <a href="#arriba" class="item" style="--i:4;" data-tooltip="Subir">⬆️</a>
-</div>
-
-<div style="height: 100px;"></div>
+</main>
 
 </body>
 </html>
